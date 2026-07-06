@@ -40,6 +40,12 @@ function addTask(){
 </div>
 `;
 taskList.appendChild(li);
+const deleteBtn = li.querySelector(".delete-btn");
+deleteBtn.addEventListener("click", function(){
+
+    li.remove();
+
+});
 taskInput.value = "";
 taskDate.value = "";
 }
