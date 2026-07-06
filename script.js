@@ -41,9 +41,15 @@ function addTask(){
 `;
 taskList.appendChild(li);
 const deleteBtn = li.querySelector(".delete-btn");
+const completeBtn = li.querySelector(".complete-btn");
 deleteBtn.addEventListener("click", function(){
 
     li.remove();
+
+});
+completeBtn.addEventListener("click", function(){
+
+    li.classList.toggle("completed");
 
 });
 taskInput.value = "";

@@ -275,3 +275,13 @@ justify-content:flex-end;
 }
 
 }
+
+.completed{
+    border-left-color:#22c55e;
+    opacity:.8;
+}
+
+.completed h3{
+    text-decoration: line-through;
+    color:#9ca3af;
+}
