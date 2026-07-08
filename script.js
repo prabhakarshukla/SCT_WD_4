@@ -119,3 +119,27 @@ function loadTasks(){
     });
 }
 loadTasks();
+
+searchInput.addEventListener("input", function(){
+
+    const searchText = searchInput.value.toLowerCase();
+
+    const allTasks = document.querySelectorAll(".task");
+
+    allTasks.forEach(function(task){
+
+        const taskName = task.querySelector("h3").textContent.toLowerCase();
+
+        if(taskName.includes(searchText)){
+
+            task.style.display = "flex";
+
+        }else{
+
+            task.style.display = "none";
+
+        }
+
+    });
+
+});
