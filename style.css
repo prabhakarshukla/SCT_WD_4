@@ -351,3 +351,13 @@ justify-content:flex-end;
     font-size:14px;
     color:#666;
 }
+
+#taskPriority{
+
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+
+}
