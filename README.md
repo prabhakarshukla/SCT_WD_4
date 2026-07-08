@@ -35,16 +35,7 @@ The application allows users to efficiently manage daily tasks with features lik
 ---
 
 ##  Screenshots
-<img width="1893" height="872" alt="image" src="https://github.com/user-attachments/assets/c2e877e5-8d51-445e-a004-06e8f561b4d6" />
-
-
-Example:
-
-- Home Page
-- Task Added
-- Completed Task
-- Search & Filter
-- Responsive View
+<img width="1887" height="857" alt="image" src="https://github.com/user-attachments/assets/01a15acc-8f61-460f-a54c-b8d2866bd439" />
 
 ---
 
