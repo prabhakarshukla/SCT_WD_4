@@ -29,6 +29,9 @@ function addTask(){
 function createTask(taskText, taskTime, isCompleted = false){
     const li = document.createElement("li");
     li.classList.add("task");
+    if(isCompleted){
+    li.classList.add("completed");
+}
     li.innerHTML = `
 <div class="task-info">
     <h3>${taskText}</h3>
@@ -106,6 +109,12 @@ function saveTasks(){
     });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
-
 }
 
+function loadTasks(){
+    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    savedTasks.forEach(function(task){
+        createTask(task.text, task.date, task.completed);
+    });
+}
