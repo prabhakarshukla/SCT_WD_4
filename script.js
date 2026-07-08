@@ -118,3 +118,4 @@ function loadTasks(){
         createTask(task.text, task.date, task.completed);
     });
 }
+loadTasks();
