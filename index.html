@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <nav class="navbar">
-        <div class="logo">
-            <h2>SkillCraft Technology Internship</h2>
-        </div>
-    </nav>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>To-Do Web App</title>
 
     <link rel="stylesheet" href="style.css">
@@ -15,109 +11,107 @@
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <h2>SkillCraft Technology Internship</h2>
+        </div>
+    </nav>
 
-    <h1>To-Do List</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Search tasks...">
-</div>
-    <div class="filter-box">
+    <div class="container">
 
-    <button class="filter-btn active" data-filter="all">
-        All
-    </button>
+        <h1>To-Do List</h1>
 
-    <button class="filter-btn" data-filter="pending">
-        Pending
-    </button>
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search tasks...">
+        </div>
 
-    <button class="filter-btn" data-filter="completed">
-        Completed
-    </button>
+        <!-- Filter -->
+        <div class="filter-box">
 
-</div>
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
 
-<div class="sort-box">
+            <button class="filter-btn" data-filter="pending">
+                Pending
+            </button>
 
-    <label for="sortTasks">Sort By:</label>
-    <select id="sortTasks">
-        <option value="newest">Newest First</option>
-        <option value="oldest">Oldest First</option>
-        <option value="high">High Priority</option>
-        <option value="medium">Medium Priority</option>
-        <option value="low">Low Priority</option>
-    </select>
-</div>
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
 
-<div class="input-box">
+        </div>
 
-    <input
-    type="text"
-    id="taskInput"
-    placeholder="Enter your task">
+        <!-- Sort -->
+        <div class="sort-box">
+            <label for="sortTasks">Sort By:</label>
 
-    <input
-    type="datetime-local"
-    id="taskDate">
+            <select id="sortTasks">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="high">High Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="low">Low Priority</option>
+            </select>
+        </div>
 
-    <select id="taskPriority">
-    <option value="High">🔴 High Priority</option>
-    <option value="Medium" selected>🟡 Medium Priority</option>
-    <option value="Low">🟢 Low Priority</option>
-    </select>
+        <!-- Input -->
+        <div class="input-box">
 
-    <button id="addBtn">
-        Add Task
-    </button>
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task">
 
-</div>
+            <input
+                type="datetime-local"
+                id="taskDate">
 
-        <input
-        type="text"
-        id="taskInput"
-        placeholder="Enter your task">
+            <select id="taskPriority">
+                <option value="High">🔴 High Priority</option>
+                <option value="Medium" selected>🟡 Medium Priority</option>
+                <option value="Low">🟢 Low Priority</option>
+            </select>
 
-        <input
-        type="datetime-local"
-        id="taskDate">
+            <button id="addBtn">
+                Add Task
+            </button>
 
-        <button id="addBtn">
-            Add Task
-        </button>
+        </div>
 
-    <div class="task-stats">
+        <!-- Stats -->
+        <div class="task-stats">
 
-    <div class="stat-card">
-        <h3 id="totalTasks">0</h3>
-        <p>Total Tasks</p>
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
     </div>
 
-    <div class="stat-card">
-        <h3 id="completedTasks">0</h3>
-        <p>Completed</p>
-    </div>
-
-    <div class="stat-card">
-        <h3 id="pendingTasks">0</h3>
-        <p>Pending</p>
-    </div>
-
-</div>
-
-    </div>
-
-    <ul id="taskList">
-
-    </ul>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
