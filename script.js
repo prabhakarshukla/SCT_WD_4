@@ -6,6 +6,7 @@ const taskList = document.querySelector("#taskList");
 addBtn.addEventListener("click", addTask);
 
 function addTask(){
+
     const taskText = taskInput.value.trim();
     const taskTime = taskDate.value;
 
@@ -15,6 +16,17 @@ function addTask(){
         return;
 
     }
+
+    createTask(taskText, taskTime);
+
+    taskInput.value = "";
+    taskDate.value = "";
+
+    saveTasks();
+
+}
+
+function createTask(taskText, taskTime, isCompleted = false){
     const li = document.createElement("li");
     li.classList.add("task");
     li.innerHTML = `
@@ -46,12 +58,12 @@ const editBtn = li.querySelector(".edit-btn");
 deleteBtn.addEventListener("click", function(){
 
     li.remove();
-
+    saveTasks();
 });
 completeBtn.addEventListener("click", function(){
 
     li.classList.toggle("completed");
-
+    saveTasks();
 });
 editBtn.addEventListener("click", function(){
     const taskHeading = li.querySelector("h3");
@@ -65,9 +77,8 @@ editBtn.addEventListener("click", function(){
         taskHeading.textContent = updatedTask.trim();
 
     }
+    saveTasks();
 });
-taskInput.value = "";
-taskDate.value = "";
 }
 
 function saveTasks(){
