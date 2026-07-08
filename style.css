@@ -361,3 +361,24 @@ justify-content:flex-end;
     cursor:pointer;
 
 }
+
+.sort-box{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+    margin:20px 0;
+    flex-wrap:wrap;
+}
+
+.sort-box label{
+    font-weight:600;
+}
+
+.sort-box select{
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
